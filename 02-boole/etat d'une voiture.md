@@ -11,7 +11,7 @@ Considérons le cas d’une voiture pour laquelle nous définissons les opérati
 
 Rechercher les états possibles de la voiture :
 
-Les 6 états possibles sont :
+Les 8 états possibles sont :
 
 - La voiture est démarrée, les phares sont allumés, la portière conducteur est ouverte.
 - La voiture est démarrée, les phares sont allumés, la portière conducteur est fermée.
