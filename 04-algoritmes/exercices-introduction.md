@@ -97,3 +97,22 @@ LIRE angle
 aire <-- (3,14 * rayon² * angle) / 360
 ECRIRE aire
 ```
+
+# Exercice 1.6
+Lire 2 nombres entier A et B.
+Afficher la valeur de A puis la valeur de B.
+Mettre le contenu de A dans B et celui de B dans A.
+Afficher à nouveau la valeur de A puis la valeur de B.
+
+```
+VARIABLE
+    valeurA est un NOMBRE ENTIER
+    valeurB est un NOMBRE ENTIER
+
+TRAITEMENT
+ECRIRE valeurA, valeurB
+LIRE valeurA, valeurB
+valeurA <-- valeurB
+valeurB <-- valeurA
+LIRE valeurA, valeurB
+```
