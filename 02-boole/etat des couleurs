@@ -48,6 +48,28 @@ P4 : Cad2 = blanc
 
 ` P1 = P2.P3.P4 ` 
 
+## Algoritme simplifié
+
+<b>VARIABLE</b>
+
+P1 est un booleen
+
+P2 est un booleen
+
+P3 est un booleen
+
+<b>TRAITEMENT</b>
+
+SI P3 est VRAI ET P4 est VRAI ALORS :
+
+    ECRIRE 'la couleur est très claire'
+
+SINON :
+
+    ECRIRE 'la couleur n'est pas très claire'
+
+
+
 ## Le résultat attendu est Cr = couleur claire. 
 
 Cr est clair si une seule des 2 couleurs additionnelles est blanche. Le blanc étant exclu de cette catégorie, la couleur de base ne doit pas être blanche.  
