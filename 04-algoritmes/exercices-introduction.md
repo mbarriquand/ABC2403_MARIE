@@ -66,10 +66,34 @@ Son aire = 4 π R²
 Son volume = (4 π R³)/3
 
 ```
-VARIABLE
+VARIABLEs
     rayon est un NOMBRE REEL
     aire est un NOMBRE REEL
     volume est un NOMBRE REEL
 
 TRAITEMENT
+LIRE rayon
+aire <-- 4 * 3,14² * rayon
+volume <-- (4 * 3,14 * rayon³) / 3
+ECRIRE aire, volume
+```
+
+# Exercice 1.5
+Lire le rayon R d’un cercle et un angle A (en degré(s)).
+
+Calculer et afficher :
+
+L’ aire du secteur circulaire = (π R² A) / 360
+
+```
+VARIABLES
+    rayon est un NOMBRE REEL
+    angle est un NOMBRE REEL
+    aire est un NOMBRE REEL
+
+TRAITEMENT
+LIRE rayon
+LIRE angle
+aire <-- (3,14 * rayon² * angle) / 360
+ECRIRE aire
 ```
