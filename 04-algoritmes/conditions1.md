@@ -10,7 +10,7 @@ VARIABLE
 TRAITEMENT
     ECRIRE "Veuillez saisir 1 nombre entier"
     LIRE nombre
-        SI nombre.VALEUR ≥ 0 ALORS
+        SI nombre.VALEUR >= 0 ALORS
         ECRIRE "Le nombre ", nombre,  " est positif."
         SINON
         ECRIRE "Le nombre ", nombre,  " est négatif."
