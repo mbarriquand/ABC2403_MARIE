@@ -75,7 +75,7 @@ TRAITEMENT
 LIRE rayon
 aire <-- 4 * 3,14² * rayon
 volume <-- (4 * 3,14 * rayon³) / 3
-ECRIRE aire, volume
+ECRIRE "L'aire du cercle est ", aire, ",son volume est ", volume, "."
 ```
 
 # Exercice 1.5
@@ -95,7 +95,7 @@ TRAITEMENT
 LIRE rayon
 LIRE angle
 aire <-- (3,14 * rayon² * angle) / 360
-ECRIRE aire
+ECRIRE "L'aire du secteur circulaire est ", aire, "."
 ```
 
 # Exercice 1.6
@@ -108,11 +108,14 @@ Afficher à nouveau la valeur de A puis la valeur de B.
 VARIABLE
     valeurA est un NOMBRE ENTIER
     valeurB est un NOMBRE ENTIER
+    valeurC est un NOMBRE ENTIER
+    
 
 TRAITEMENT
 ECRIRE valeurA, valeurB
-LIRE valeurA, valeurB
+LIRE "Les valeurs sont ", valeurA, " et ", valeurB, "."
+valeurC <-- valeurA
 valeurA <-- valeurB
 valeurB <-- valeurA
-LIRE valeurA, valeurB
+LIRE "Les valeurs inversées sont ", valeurA, " et ", valeurB, "."
 ```
