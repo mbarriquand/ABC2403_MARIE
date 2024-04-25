@@ -73,7 +73,7 @@ VARIABLEs
 
 TRAITEMENT
 LIRE rayon
-aire <-- 4 * 3,14² * rayon
+aire <-- 4 * 3,14 * rayon²
 volume <-- (4 * 3,14 * rayon³) / 3
 ECRIRE "L'aire du cercle est ", aire, ",son volume est ", volume, "."
 ```
@@ -106,16 +106,19 @@ Afficher à nouveau la valeur de A puis la valeur de B.
 
 ```
 VARIABLE
-    valeurA est un NOMBRE ENTIER
-    valeurB est un NOMBRE ENTIER
-    valeurC est un NOMBRE ENTIER
+    A est un NOMBRE ENTIER
+    B est un NOMBRE ENTIER
+    C est un NOMBRE ENTIER
     
 
 TRAITEMENT
-ECRIRE valeurA, valeurB
-LIRE "Les valeurs sont ", valeurA, " et ", valeurB, "."
-valeurC <-- valeurA
-valeurA <-- valeurB
-valeurB <-- valeurA
-LIRE "Les valeurs inversées sont ", valeurA, " et ", valeurB, "."
+ECRIRE "Veuillez saisir un nombre entier";
+LIRE A
+ECRIRE "Veuillez saisir un autre nombre entier";
+LIRE B
+ECRIRE "Les valeurs sont ", A, " et ", B, "."
+C <-- A
+A <-- B
+B <-- A
+ECRIRE "Les valeurs inversées sont ", A, " et ", B, "."
 ```
