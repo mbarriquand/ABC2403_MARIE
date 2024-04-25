@@ -22,12 +22,12 @@ public class App {
 
 		B = sc.nextInt();
 		
-		System.out.println("Vos valeurs sont " + A + " et " + B + ".");
+		System.out.println("Vos valeurs sont " + A + " et " + B);
 		
 		C = B;
 		B = A;
 		
-		System.out.println("Vos valeurs inversées sont " + C + " et " + B + ".");
+		System.out.println("Vos valeurs inversées sont " + C + " et " + B);
 		
 		
 		
