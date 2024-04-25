@@ -21,8 +21,7 @@ LIRE A
 ECRIRE "Veuillez saisir un autre nombre entier";
 LIRE B
 ECRIRE "Les valeurs sont ", A, " et ", B, "."
-C <-- A
-A <-- B
+C <-- B
 B <-- A
-ECRIRE "Les valeurs inversées sont ", A, " et ", B, "."
+ECRIRE "Les valeurs inversées sont ", C, " et ", B, "."
 ```

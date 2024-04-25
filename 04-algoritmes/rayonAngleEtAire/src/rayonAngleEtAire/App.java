@@ -2,6 +2,8 @@ package rayonAngleEtAire;
 
 import java.util.Scanner;
 
+import java.lang.Math;
+
 public class App {
 
 	// exercice 1.3
@@ -26,7 +28,7 @@ public class App {
 		
 		angle = sc.nextInt();
 				
-		aire = ((3.14 * (rayon*rayon) * angle) / 360);
+		aire = ((Math.PI * (Math.pow(rayon,  2)) * angle) / 360);
 		
 		System.out.println("L'aire du secteur circulaire de rayon " + rayon + " et d'angle " + angle + " est " + aire + ".");
 		

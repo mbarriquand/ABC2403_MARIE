@@ -2,6 +2,8 @@ package airesEtVolumes;
 
 import java.util.Scanner;
 
+import java.lang.Math;
+
 public class App {
 
 	// exercice 1.4
@@ -18,18 +20,25 @@ public class App {
 		
 		double volume;
 		
+		
 		System.out.println("Veuillez saisir un rayon");
 		
-		rayon = sc.nextInt();
-							
-		aire = (4 * 3.14 * (rayon * rayon));
+		System.out.println("");
 		
-		volume =  ((4 * 3.14 * (rayon*rayon*rayon)) / 3);
+		rayon = sc.nextDouble();
+		
+		System.out.println("");
+
+		aire = (4.0 * Math.PI * (Math.pow(rayon,  2)));
+			
+		volume =  (4.0 * Math.PI * (Math.pow(rayon,  3)));
 		
 		sc.close();
 		
 		System.out.println("L'aire du cercle de rayon " + rayon + " est " + aire + " et son volume est " + volume + ".");
-
+		
+		sc.close();
+		
 	}
 
 }
