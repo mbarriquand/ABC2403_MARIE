@@ -35,7 +35,7 @@ public class App {
 		
 		sc.close();
 		
-		System.out.println("L'aire du cercle de rayon " + rayon + " est " + aire + " et son volume est " + volume + ".");
+		System.out.println("L'aire de la sphère de rayon " + rayon + " est " + aire + " et son volume est " + volume + ".");
 		
 		sc.close();
 		
