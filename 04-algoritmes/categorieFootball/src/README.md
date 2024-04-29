@@ -15,29 +15,39 @@
 ```
 VARIABLES
 age est un NOMBRE ENTIER
+cat est une CHAINE DE CARACTERE
 
 TRAITEMENT
 ECRIRE "Veuillez saisir votre âge."
+cat <-- "Vous appartenez à la catégorie: ";
 LIRE age
 	SI age<5 ALORS
 	ECRIRE "Vous êtes trop jeune."
-	SI 5<age<6 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Débutant'."
-	SI 7<age<8 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Poussin'."
-	SI 9<age<10 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Benjamin'."
-	SI 11<age<12 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Pupille'."
-	SI 13<age<14 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Minime'."
-	SI 15<age<16 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Cadet'."
-	SI 17<age<18 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Junior'."
-	SI 19<age<34 ALORS
-	ECRIRE "Vous appartenez à la catégorie 'Sénior'."
+	SI age>5 ALORS
+	ECRIRE cat, "'Débutant'."
+	SI age>7 ALORS
+	ECRIRE cat, "'Poussin'."
+	SI age>9 ALORS
+	ECRIRE cat, "'Benjamin'."
+	SI age>11 ALORS
+	ECRIRE cat, "'Pupille'."
+	SI age>13 ALORS
+	ECRIRE cat, "'Minime'."
+	SI age>15 ALORS
+	ECRIRE cat, "'Cadet'."
+	SI age>17 ALORS
+	ECRIRE cat, "'Junior'."
+	SI age>19 ALORS
+	ECRIRE cat, "'Sénior'."
+	SI age>35 ALORS
+	ECRIRE cat, "'Vétéran'."
 	SINON
-	ECRIRE "Vous appartenez à la catégorie 'Vétéran'."
+	ECRIRE "Vous êtes trop jeune."
 	FIN SI
 ```
+
+Sauf que... ça ne marche ABSOLUMENT PAS ! (ah bah si avec le 'else if')
+
+Deuxième tentative, avec le switch ;
+
+
