@@ -23,5 +23,6 @@ LIRE B
 ECRIRE "Les valeurs sont ", A, " et ", B, "."
 C <-- B
 B <-- A
+A <-- C
 ECRIRE "Les valeurs inversées sont ", C, " et ", B, "."
 ```

@@ -11,9 +11,9 @@ nombre est un ENTIER
 TRAITEMENT
 ECRIRE "Veuillez saisir un nombre entier"
 LIRE nombre
-	SI nombre>0 ALORS
+SI nombre >= 0 ALORS
 	ECRIRE nombre, " est positif"
-	SINON
+SINON
 	ECRIRE nombre, " est négatif"
-	FIN SI
+FIN SI
 ```

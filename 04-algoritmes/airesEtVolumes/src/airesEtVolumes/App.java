@@ -14,7 +14,7 @@ public class App {
 		
 		sc = new Scanner(System.in);
 		
-		double rayon;
+		double R;
 		
 		double aire;
 		
@@ -23,19 +23,13 @@ public class App {
 		
 		System.out.println("Veuillez saisir un rayon");
 		
-		System.out.println("");
+		R = sc.nextDouble();
 		
-		rayon = sc.nextDouble();
-		
-		System.out.println("");
-
-		aire = (4.0 * Math.PI * (Math.pow(rayon,  2)));
+		aire = (4.0 * Math.PI * (Math.pow(R,  2)));
 			
-		volume =  (4.0 * Math.PI * (Math.pow(rayon,  3)));
+		volume =  (4.0 * Math.PI * (Math.pow(R,  3)));
 		
-		sc.close();
-		
-		System.out.println("L'aire de la sphère de rayon " + rayon + " est " + aire + " et son volume est " + volume + ".");
+		System.out.println("L'aire de la sphère de rayon " + R + " est " + aire + " et son volume est " + volume + ".");
 		
 		sc.close();
 		

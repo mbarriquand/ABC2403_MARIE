@@ -26,8 +26,9 @@ public class App {
 		
 		C = B;
 		B = A;
+		A = C;
 		
-		System.out.println("Vos valeurs inversées sont " + C + " et " + B);
+		System.out.println("Vos valeurs sont " + A + " et " + B);
 		
 		
 		
