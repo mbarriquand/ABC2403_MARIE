@@ -6,61 +6,74 @@ public class App {
 
 	public static void main(String[] args) {
 		
+		// VARIABLES
 		Scanner sc;
 		sc = new Scanner(System.in);
 
 		int age;
-		String cat;
-				
+		String cat = null;
+		
+		// TRAITEMENT
 		System.out.println("Veuillez saisir votre âge.");
 		
 		age = sc.nextInt();
 		
-		if (age < 5) {
-			System.out.println("Vous êtes trop jeune.");
+		
+		if (age < 5) { 
+			
+			cat = "trop jeune";
+			
 		}
+		
 		else if (age < 6) {
-			cat = "Débutant";
-			//System.out.println(cat + "'Débutant'.");
+			cat = "un débutant";
 		}
+		
 		
 		else if (age < 8) {
-			cat = "Poussin";
+			cat = "un poussin";
 		}
+		
 		
 		else if (age < 10) {
-			cat = "Benjamin";
+		cat = "un benjamin";		
 		}
+		
 		
 		else if (age < 12) {
-			cat = "Pupille";
+			cat = "un pupille";
 		}
+		
 		
 		else if (age < 14) {
-			cat = "Minime";
+			cat = "un minime";
 		}
 		
-		else if (age < 17) {
-			cat = "Cadet";
+		
+		else if (age < 16) {
+			cat = "un cadet";
 		}
 		
-		else if (age < 19) {
-			cat = "Junior";
+		
+		else if (age < 18) {
+			cat = "un junior";
 		}
+		
 		
 		else if (age < 34) {
-			cat = "Senior";
-		}
-			
-		else {
-			cat = "Vétéran";
+			cat = "un senior";
 		}
 		
-		// affichage
-			System.out.println("Vous appartenez à la catégorie " + cat + ".");
+		
+		else if (age > 35) {
+			cat = "un vétéran";
+		}
 		
 		
-		sc.close();
+		System.out.println("Vous êtes " + cat + "."); 
+		
+		
+		
+	sc.close();
 	}
-
 }
