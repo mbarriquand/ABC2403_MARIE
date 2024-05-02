@@ -27,29 +27,34 @@ public class App {
 		c4 = sc.nextDouble();
 		
 		triche = c1 + c2 + c3 + c4;
-		resultat = c1 / 100;
-				
-		if (resultat > 0.5) {
-			System.out.println("Le candidat numéro 1 est élu");
-		}
 		
-		else if (resultat < 0.125) {
-			System.out.println("Le candidat numéro 1 est battu");
-			}
-		
-		else if (c1 > c2 && c1 > c3 && c1 > c4) {
-			System.out.println("Le candidat numéro 1 va au second tour en ballotage favorable");
-			}
-		
-		else {
-			System.out.println("Le candidat numéro 1 va au second tour en ballotage défavorable");
-		}
-		
-		
-		if ( triche > 100) ; {
+		if ( triche > 100) {
 			System.out.println("Quelqu'un tente de voler les élections!");
 			System.exit(0);
 		}
+		else {
+			
+		
+			resultat = c1 / 100;
+					
+			if (resultat > 0.5) {
+				System.out.println("Le candidat numéro 1 est élu");
+			}
+			
+			else if (resultat < 0.125) {
+				System.out.println("Le candidat numéro 1 est battu");
+				}
+			
+			else if (c1 > c2 && c1 > c3 && c1 > c4) {
+				System.out.println("Le candidat numéro 1 va au second tour en ballotage favorable");
+				}
+			
+			else {
+				System.out.println("Le candidat numéro 1 va au second tour en ballotage défavorable");
+			}
+		
+	}
+		
 			
 		
 		sc.close();
