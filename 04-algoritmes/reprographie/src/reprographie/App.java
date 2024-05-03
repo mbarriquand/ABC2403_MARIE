@@ -20,16 +20,12 @@ public class App {
 		System.out.print("Saisissez le nombre de photocopies: ");
 		nombreDeCopies = sc.nextInt();
 		
-		if (nombreDeCopies <=10) {
-			
+		if (nombreDeCopies <= 10) {
 			montantDeLaFacture = nombreDeCopies * App.P1;
-			
-			
 		}
-		else if (nombreDeCopies <=30) { 
+		else if (nombreDeCopies <= 30) { 
 			montantDeLaFacture = 10 * App.P1 + (nombreDeCopies - 10) * App.P2;
 		}
-		
 		else {
 			montantDeLaFacture = 10 * App.P1 + 20 * App.P2 + (nombreDeCopies - 30) * App.P3;
 		}
