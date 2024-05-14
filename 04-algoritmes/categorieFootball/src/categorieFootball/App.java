@@ -11,10 +11,12 @@ public class App {
 		sc = new Scanner(System.in);
 
 		int age;
-		String cat = null;
+		String cat;
 		
 		// TRAITEMENT
-		System.out.println("Veuillez saisir votre âge.");
+		System.out.println("Catégorie Football");
+		
+		System.out.println("Saisissez votre âge.");
 		
 		age = sc.nextInt();
 		
@@ -65,7 +67,7 @@ public class App {
 		}
 		
 		
-		else if (age > 35) {
+		else {
 			cat = "un vétéran";
 		}
 		

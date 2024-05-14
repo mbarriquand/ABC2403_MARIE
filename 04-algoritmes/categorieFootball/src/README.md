@@ -18,7 +18,7 @@ age est un NOMBRE ENTIER
 cat est une CHAINE DE CARACTERE
 
 TRAITEMENT
-ECRIRE "Veuillez saisir votre âge."
+ECRIRE "Saisissez votre âge."
 cat <-- "Vous appartenez à la catégorie: ";
 LIRE age
 	SI age<5 ALORS
@@ -45,9 +45,4 @@ LIRE age
 	ECRIRE "Vous êtes trop jeune."
 	FIN SI
 ```
-
-Sauf que... ça ne marche ABSOLUMENT PAS ! (ah bah si avec le 'else if')
-
-Deuxième tentative, avec le switch ;
-
 
