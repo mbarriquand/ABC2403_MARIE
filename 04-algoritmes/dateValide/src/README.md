@@ -2,9 +2,10 @@
 
 Écrivez un algorithme qui demande à l’utilisateur de saisir 3 nombres entiers
 
-Un numéro de jour
-Un numéro de mois
-Un numéro d’année
+- Un numéro de jour
+- Un numéro de mois
+- Un numéro d’année
+
 L’algorithme indique ensuite s’il s’agit ou non d’une date valide.
 
 Cet exercice est certes d’un manque d’originalité affligeant, mais après tout, en algorithmique comme ailleurs, il faut connaître ses classiques ! Et quand on a fait cela une fois dans sa vie, on apprécie pleinement l’existence d’un type « Date » dans certains langages…).
