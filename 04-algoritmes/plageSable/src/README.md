@@ -8,17 +8,22 @@ Lorsque la réponse convient, afficher le nombre saisi suivi de “Bravo, vous a
 VARIABLES
 
 nombre est un ENTIER
+compteur est un ENTIER
 
 TRAITEMENT
 
 ECRIRE "3.1 : La bonne plage de sable"
 
 	FAIRE
-		ECRIRE "La réponse ne convient pas" 
-		ECRIRE "Saisissez un nombre entre 1 et 3"
-		LIRE nombre
+		SI compteur <=1
+			ECRIRE "Saisissez un nombre entre 1 et 3"
+			LIRE nombre 
+		SINON
+			ECRIRE "Erreur ! Resaisissez un nombre entre 1 et 3"
+			LIRE nombre
+		FIN SI
 	TANT QUE nombre < 1 OU nombre > 3 
-	FIN SI
+	FIN FAIRE
 		
 ECRIRE "Bravo, vous avez réussi!"
 
