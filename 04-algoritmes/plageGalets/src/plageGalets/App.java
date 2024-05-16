@@ -11,7 +11,7 @@ public class App {
 		sc = new Scanner (System.in);
 		int nombre;
 		
-		System.out.println("3.2 : La bonne plage de sable");
+		System.out.println("3.2 : La bonne plage de galets");
 		
 			do {
 				System.out.println("Saisissez un nombre");
