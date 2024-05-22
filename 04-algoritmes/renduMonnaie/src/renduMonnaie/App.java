@@ -56,12 +56,12 @@ public class App {
 		System.out.println("Répartition de la monnaie à restituer au client :");
 		
 				// ça marche jusqu'ici, ensuite rip
-		
+			
 		dixC = ((int)rendu * 10);
 		rendu -= dixC * 10;
 	
 		if (dixC > 0) {
-			System.out.println("- " + dixC + "pièces de 0.10€");
+			System.out.println("- " + dixC + " pièces de 0.10€");
 		}
 	
 		sc.close();
