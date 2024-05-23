@@ -23,7 +23,7 @@ Le client doit donner 8 billets de 5 Euros soit 40 Euros.
 Rendu monnaie : 2.30 Euros
 Répartition de la monnaie à restituer au client : 
 - 1 pièce de 2 Euros
-- 2 pièces de 0.20 Euros
+- 1 pièces de 0.20 Euros
 - 1 pièce de 0.10 Euros
 ```
 
