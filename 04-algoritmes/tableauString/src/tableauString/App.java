@@ -12,6 +12,8 @@ public class App {
 		tableau[4] = "u";
 		tableau[5] = "y";
 		
+		System.out.println("Exercice 4.2 : Créer un tableau de chaines de caractères");
+		
 		System.out.println(tableau[0]);
 
 	}
