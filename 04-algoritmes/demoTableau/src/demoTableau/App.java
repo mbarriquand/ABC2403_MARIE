@@ -4,10 +4,6 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		int a;
-		a = 1;
-		int b = 2;
-		
 		// deux façons d'initialiser des tableaux
 		
 		int [] tableau;
@@ -24,6 +20,11 @@ public class App {
 		tableau[1] = 5;
 		tableau[2] = 22;
 		
+		System.out.println("Element 0 de tableau = " + tableau[0]);
+		System.out.println("Element 1 de tableau = " + tableau[1]);
+		System.out.println("Element 2 de tableau = " + tableau[2]);
+		
+					
 		/*
 		 * POUR I de O à longueur(tableau), incrémenter I
 		 * FIN POUR
@@ -31,6 +32,7 @@ public class App {
 		
 		
 		for (int i = 0; i < tableau.length; i++) {
+			System.out.println("Element" + i + " de tableau = " + tableau[i]);
 			
 		}
 		
