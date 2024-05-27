@@ -28,7 +28,7 @@ public class App {
 		
 		for (int valeur : tableau) {
 			
-			if (valeur >=0) {
+			if (valeur >= 0) {
 				positifs++;
 			}
 			else {
