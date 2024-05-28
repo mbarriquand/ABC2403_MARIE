@@ -5,19 +5,19 @@ public class App {
 	public static void main(String[] args) {
  
 		float somme;
+		somme = 0;
 
 		System.out.println("Exercice 4.4 : Somme des valeurs d'un tableau");
 		
-		float [] tableau = new float[] {1, 2, 3, 4, 4, 0, 7, 65, 7, 20 };
 		
-		somme = 0;
+		float [] tableau = new float[] {1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 		
-		
-		for ( float i : tableau) {
-	          somme = somme + i;
+					
+		for ( int i = 0; i < tableau.length; i++) {
+	          somme = somme + tableau[i];
 	      }
 		
-		System.out.println("Somme des valeurs du tableau : " + somme);
+		System.out.println("La somme des valeurs du tableau : " + somme);
 	}
 
 }
