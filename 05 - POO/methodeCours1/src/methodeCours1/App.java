@@ -10,13 +10,13 @@ public class App {
 		 
 		 String prenom = "Jane";
 		 String nom = "Doe";
-		 String phrase = App.ConcatenerPrenomNom(prenom, nom);
+		 String phrase = App.concatenerPrenomNom(prenom, nom);
 		 double resultat = App.additionner(17, 4.5);
 	
 		 
 		 System.out.println(resultat);
 		 System.out.println(phrase);
-		 App.AfficherJourHeureDuMoment();
+		 App.afficherJourHeureDuMoment();
 	 }
 	 
 	 public static double additionner(double valeur1, double valeur2) {
@@ -25,7 +25,7 @@ public class App {
 		 return somme;
 	 }
 	  	
-	public static String ConcatenerPrenomNom(String prenom, String nom) {
+	public static String concatenerPrenomNom(String prenom, String nom) {
 		
 		String retour;
 		retour = prenom + "." + nom;
@@ -33,7 +33,7 @@ public class App {
 			
 	}
 	
-	public static void AfficherJourHeureDuMoment() {
+	public static void afficherJourHeureDuMoment() {
 		SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	    Date date = new Date();
 	    System.out.println(s.format(date));
