@@ -34,9 +34,9 @@ public class App {
 	}
 	
 	public static void afficherJourHeureDuMoment() {
-		SimpleDateFormat s = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 	    Date date = new Date();
-	    System.out.println(s.format(date));
+	    System.out.println(formatDate.format(date));
 	}
 	
 
