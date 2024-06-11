@@ -75,7 +75,7 @@ public class Bouteille {
 	
 	public boolean fill() {
 		boolean managedToFill;
-		if (this.contenuEnL != this.contenanceMaxEnL) {
+		if (this.contenuEnL != this.contenanceMaxEnL && this.estOuvert == true) {
 			managedToFill = true;
 			this.contenuEnL = this.contenanceMaxEnL;
 		}
@@ -84,22 +84,58 @@ public class Bouteille {
 		}
 		return managedToFill;
 	}
-		
-	/*
 	
-	public boolean fill () {
-		boolean managedToFill;
-		managedToFill = this.contenanceMaxEnL;
-		return managedToFill;
+	public boolean empty() {
+		boolean managedToEmpty;
+		if (this.contenuEnL == this.contenanceMaxEnL && this.estOuvert == true) {
+			managedToEmpty = true;
+			this.contenuEnL = 0;
+		}
+		else {
+			managedToEmpty = false;
+		}
+		return managedToEmpty;
 	}
 	
-	
-	public float donneContenanceEnCL() {
+				
+	public float convertContent() {
 		float result;
 		result = this.contenanceMaxEnL * 100;
 		return result;
-	} */
+	} 
 	
-	
+	public boolean fillPartially(float quantity) {
+		boolean managedToFillPartially;
+		float freeSpace = this.contenanceMaxEnL - this.contenuEnL;
+			
+		if (quantity <= freeSpace && this.estOuvert == true && this.contenanceMaxEnL > 0f) {
+			managedToFillPartially = true;
+			this.contenuEnL += quantity;
+		}
+		else {
+			managedToFillPartially = false;
+		}
+		return managedToFillPartially;
 	}
+	
+	public boolean emptyPartially (float quantity) {
+		boolean managedToEmptyPartially;
+		float partiallyFull = this.contenanceMaxEnL - this.contenuEnL;
+		if (quantity >= 0) {		
+			
+			if (quantity >= partiallyFull && this.estOuvert == true && this.contenanceMaxEnL > 0f) {
+			managedToEmptyPartially = true;
+			this.contenuEnL -= quantity;
+			}
+			else {
+			managedToEmptyPartially = false;
+			}
+		}
+		else { 
+			managedToEmptyPartially = false;
+		}
+		return managedToEmptyPartially;
+	}
+	
+}
 

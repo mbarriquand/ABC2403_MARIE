@@ -14,9 +14,23 @@ public class App {
 		
 		// float contenanceEnCLDeBouteille2 = bouteille2.donneContenanceEnCL(); */
 		
-		Bouteille bouteilleCoca = new Bouteille(0.5f, 0.5f, false, "Coca");
+		Bouteille bouteilleCoca = new Bouteille(0.5f, 0.5f, true, "Coca");
 		
-		boolean openOK = bouteilleCoca.open();
+		// Bouteille bouteilleCoca = new Bouteille(0.5f, 0.5f, false, "Coca");
+			
+		// Bouteille bouteilleCoca = new Bouteille(1f, 0.5f, true, "Coca");
+		
+		// Bouteille bouteilleCoca = new Bouteille(1f, 0.5f, false, "Coca");
+		
+		// Bouteille bouteilleCoca = new Bouteille(1f, 1f, true, "Coca");
+		
+		// Bouteille bouteilleCoca = new Bouteille(1f, 1f, false, "Coca");
+		
+		// Bouteille bouteilleCoca = new Bouteille(0f, 0f, true, "Coca");
+		
+		// Bouteille bouteilleCoca = new Bouteille(0f, 0f, false, "Coca");
+				
+		/* boolean openOK = bouteilleCoca.open();
 		
 		boolean openOK2 = bouteilleCoca.open();
 		
@@ -27,6 +41,22 @@ public class App {
 		boolean fillOK = bouteilleCoca.fill();
 		
 		boolean fillOK2 = bouteilleCoca.fill();
+		
+		float contentOK = bouteilleCoca.convertContent();
+		
+		float contentOK2 = bouteilleCoca.convertContent(); */
+		
+		// boolean fillPartiallyOK = bouteilleCoca.fillPartially(0.4f);
+		
+		// boolean fillPartiallyOK = bouteilleCoca.fillPartially(0.4f);
+		
+		// boolean fillPartiallyOK = bouteilleCoca.fillPartially(0f);
+		
+		// boolean emptyPartialOK = bouteilleCoca.emptyPartially(0.4f);
+		
+		 boolean emptyPartialOK = bouteilleCoca.emptyPartially(0f);
+		
+		
 		
 	}
 

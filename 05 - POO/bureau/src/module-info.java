@@ -4,5 +4,5 @@
 /**
  * 
  */
-module methodeCours1 {
+module bureau {
 }
