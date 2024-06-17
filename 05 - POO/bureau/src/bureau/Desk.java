@@ -4,44 +4,69 @@ public class Desk {
 
 	// ATTRIBUTES
 	
-	private float height;
-	private float height1;
-	private float height2;
-	private float height3;
-	private boolean hasPower;
+	private float hauteurEnCM;
+	private float hauteurMaxEnCM;
+	private float hauteurMinEnCM;
+	private float hauteur1EnCM;
+	private float hauteur2EnCM;
+	private float hauteur3EnCM;
+	private boolean branche;
 	
 	// CONSTRUCTORS
 	
 	//default desk
 	public Desk() {
-		height1 = 90;
-		height2 = 120;
-		height3 = 150;
-		hasPower = true;
+		hauteurEnCM = 80;
+		hauteurMaxEnCM = 120;
+		hauteurMinEnCM = 65;
+		hauteur1EnCM = 80;
+		hauteur2EnCM = 100;
+		hauteur3EnCM = 120;
+		branche = true;
 	}
 
-	public Desk(float _height, float _height1,
-			float _height2, float _height3, boolean _hasPower) {
-		this.height = _height;
-		this.height1 = _height1;
-		this.height2 = _height2;
-		this.height3 = _height3;
+	public Desk(float _hauteurEnCM, float _hauteurMaxEnCM,
+			float _hauteurMinEnCM, float _hauteur1EnCM, float _hauteur2EnCM,
+			float _hauteur3EnCM, boolean _branche) {
+		this.hauteurEnCM = _hauteurEnCM;
+		this.hauteurMaxEnCM = _hauteurMaxEnCM;
+		this.hauteurMinEnCM = _hauteurMinEnCM;
+		this.hauteur1EnCM = _hauteur1EnCM;
+		this.hauteur2EnCM = _hauteur2EnCM;
+		this.hauteur3EnCM = _hauteur3EnCM;
+		this.branche = _branche;
 	}
 		
 	// METHODS
-		
-	public boolean goesToHeight1() {
-		boolean managesToGoToHeight1;
-		if (this.hasPower && this.height == this.height1) {
-			return managesToGoToHeight1 = false;
-		}
-		else if ( this.hasPower && this.height != this.height1) {
-			
-			managesToGoToHeight1 = true;
-		}
-		return managesToGoToHeight1;
+	
+	public boolean aDuCourant() {
+		boolean estBranche = false;
+		if (this.branche == true) {
+			estBranche = true;
+	}
+	return estBranche;
+	
 	}
 		
+	public boolean peutMonter() {
+		boolean versLeHaut = false;
+		if (this.branche == true && this.hauteurEnCM < this.hauteurMaxEnCM) {
+			versLeHaut = true;
+		}
+		return versLeHaut;
+	}
+	
+	public boolean peutDescendre () {
+		boolean versLeBas = false;
+		if (this.branche == true && this.hauteurEnCM > this.hauteurMinEnCM); {
+			versLeBas = true;
+		}
+		return versLeBas;
+	}
+	
+	
+	
+}
+
 	
 
-}

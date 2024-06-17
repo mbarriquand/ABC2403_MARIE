@@ -4,14 +4,22 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Desk desk1 = new Desk(100f, 90f, 120f, 150f, true);
+				
+		Desk bureauDeBase = new Desk();
 		
-		boolean goesToHeight1 = desk1.goesToHeight1();
+		// test de la méthode aDuCourant
 		
-		Desk desk2 = new Desk(90f, 90f, 120f, 150f, true);
+		// test de la méthode peutMonter
+		Desk bureau1 = new Desk(80f, 150f, 65f, 80f, 100f, 120f, true);
+		boolean monte1 = bureau1.peutMonter();
+		Desk bureau2 = new Desk(80f, 150f, 65f, 80f, 100f, 120f, false);
+		boolean monte2 = bureau2.peutMonter();
+		Desk bureau3 = new Desk(150f, 150f, 65f, 80f, 100f, 120f, true);
+		boolean monte3 = bureau3.peutMonter();
 		
-		boolean goesToHeight2 = desk2.goesToHeight1();
+		// test de la méthode peutDescendre
 
+	
 	}
 
 }
