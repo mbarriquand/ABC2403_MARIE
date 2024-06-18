@@ -48,25 +48,62 @@ public class Desk {
 	
 	}
 		
-	public boolean peutMonter() {
+	public boolean peutMonter(float hauteur) {
 		boolean versLeHaut = false;
 		if (this.branche == true && this.hauteurEnCM < this.hauteurMaxEnCM) {
+			this.hauteurEnCM = this.hauteurEnCM + hauteur;
 			versLeHaut = true;
 		}
 		return versLeHaut;
 	}
 	
-	public boolean peutDescendre () {
+	public boolean peutDescendre (float hauteur) {
 		boolean versLeBas = false;
 		if (this.branche == true && this.hauteurEnCM > this.hauteurMinEnCM); {
+			this.hauteurEnCM = this.hauteurEnCM - hauteur;
 			versLeBas = true;
 		}
 		return versLeBas;
 	}
 	
+	public boolean peutAllerAHauteur1 () {
+		boolean versHauteur1 = false;
+		if (this.branche == true && this.hauteurEnCM != this.hauteur1EnCM); {
+			this.hauteurEnCM = this.hauteur1EnCM;
+			versHauteur1 = true;
+		}
+		return versHauteur1;
+	}
 	
+	public boolean peutAllerAHauteur2 () {
+		boolean versHauteur2 = false;
+		if (this.branche == true && this.hauteurEnCM != this.hauteur2EnCM); {
+			this.hauteurEnCM = this.hauteur2EnCM;
+			versHauteur2 = true;
+		}
+		return versHauteur2;
+	}
 	
-}
+	public boolean peutAllerAHauteur3 () {
+		boolean versHauteur3 = false;
+		if (this.branche == true && this.hauteurEnCM != this.hauteur3EnCM); {
+			this.hauteurEnCM = this.hauteur3EnCM;
+			versHauteur3 = true;
+		}
+		return versHauteur3;
+	}
+	
+	public boolean positionnerALaHauteur (float hauteur) {
+		boolean versHauteurCustom = false;
+		if (this.branche == true && this.hauteurEnCM <= this.hauteurMaxEnCM && this.hauteurEnCM >= this.hauteurMinEnCM); {
+			this.hauteurEnCM = hauteur;
+			versHauteurCustom = true;
+		}
+		return versHauteurCustom;
+		}
+	}
+	
+
 
 	
 
