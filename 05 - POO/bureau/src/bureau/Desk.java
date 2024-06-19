@@ -40,57 +40,26 @@ public class Desk {
 	// METHODS
 	
 	public boolean aDuCourant() {
-		boolean estBranche = false;
-		if (this.branche == true) {
-			estBranche = true;
-	}
-	return estBranche;
+
+		return branche;
 	
 	}
 		
-	public boolean peutMonter(float hauteur) {
+	public boolean monter(float hauteur) {
 		boolean versLeHaut = false;
 		if (this.branche == true && this.hauteurEnCM < this.hauteurMaxEnCM) {
-			this.hauteurEnCM = this.hauteurEnCM + hauteur;
 			versLeHaut = true;
 		}
 		return versLeHaut;
 	}
 	
-	public boolean peutDescendre (float hauteur) {
+	public boolean descendre (float hauteur) {
 		boolean versLeBas = false;
 		if (this.branche == true && this.hauteurEnCM > this.hauteurMinEnCM); {
 			this.hauteurEnCM = this.hauteurEnCM - hauteur;
 			versLeBas = true;
 		}
 		return versLeBas;
-	}
-	
-	public boolean peutAllerAHauteur1 () {
-		boolean versHauteur1 = false;
-		if (this.branche == true && this.hauteurEnCM != this.hauteur1EnCM); {
-			this.hauteurEnCM = this.hauteur1EnCM;
-			versHauteur1 = true;
-		}
-		return versHauteur1;
-	}
-	
-	public boolean peutAllerAHauteur2 () {
-		boolean versHauteur2 = false;
-		if (this.branche == true && this.hauteurEnCM != this.hauteur2EnCM); {
-			this.hauteurEnCM = this.hauteur2EnCM;
-			versHauteur2 = true;
-		}
-		return versHauteur2;
-	}
-	
-	public boolean peutAllerAHauteur3 () {
-		boolean versHauteur3 = false;
-		if (this.branche == true && this.hauteurEnCM != this.hauteur3EnCM); {
-			this.hauteurEnCM = this.hauteur3EnCM;
-			versHauteur3 = true;
-		}
-		return versHauteur3;
 	}
 	
 	public boolean positionnerALaHauteur (float hauteur) {
@@ -101,9 +70,18 @@ public class Desk {
 		}
 		return versHauteurCustom;
 		}
+	
+	public boolean allerAHauteur1 () {
+				
+	return positionnerALaHauteur(hauteur1EnCM);
 	}
 	
-
-
+	public boolean allerAHauteur2 () {
+		return positionnerALaHauteur(hauteur2EnCM);
+	}
 	
-
+	public boolean allerAHauteur3 () {
+		return positionnerALaHauteur(hauteur3EnCM);
+	}
+}
+	
