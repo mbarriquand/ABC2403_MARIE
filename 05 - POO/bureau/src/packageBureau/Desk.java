@@ -1,4 +1,4 @@
-package bureau;
+package packageBureau;
 
 public class Desk {
 
