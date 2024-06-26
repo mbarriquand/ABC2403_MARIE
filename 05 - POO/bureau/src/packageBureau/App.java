@@ -1,10 +1,21 @@
 package packageBureau;
 
+import java.math.BigDecimal;
+
+
+
 public class App {
-
+	
+	private static BigDecimal BigDecimal(int i) {
+		
+		return BigDecimal.valueOf(i);
+	}
+	
 	public static void main(String[] args) {
+		
+		
 
-				
+		/*		
 		Desk bureauDeBase = new Desk();
 		
 		 		
@@ -80,7 +91,15 @@ public class App {
 		boolean hauteurCustom2 = bureauDeBase.positionnerALaHauteur(85);
 		
 		Desk bureau18 = new Desk(150f, 150f, 65f, 80f, 100f, 120f, true);
-		boolean hauteurCustom = bureauDeBase.positionnerALaHauteur(60);
-	}
+		boolean hauteurCustom = bureauDeBase.positionnerALaHauteur(60); */
 
+
+	
+}
+
+	Bureau bureauTest = new Bureau(BigDecimal(100), BigDecimal(75), BigDecimal(120));
+	
+	BureauElectrique bureauElectrique1 = new BureauElectrique(true, BigDecimal(80), BigDecimal(100), BigDecimal(120),
+			BigDecimal(90), BigDecimal(100), BigDecimal(110), BigDecimal(120), BigDecimal(70));
+	
 }

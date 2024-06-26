@@ -47,7 +47,8 @@ public class Desk {
 		
 	public boolean monter(float hauteur) {
 		boolean versLeHaut = false;
-		if (this.branche == true && this.hauteurEnCM < this.hauteurMaxEnCM) {
+		if (this.branche == true && this.hauteurEnCM + hauteur < this.hauteurMaxEnCM) {
+			this.hauteurEnCM = this.hauteurEnCM + hauteur;
 			versLeHaut = true;
 		}
 		return versLeHaut;
@@ -55,7 +56,7 @@ public class Desk {
 	
 	public boolean descendre (float hauteur) {
 		boolean versLeBas = false;
-		if (this.branche == true && this.hauteurEnCM > this.hauteurMinEnCM); {
+		if (this.branche == true && this.hauteurEnCM - hauteur > this.hauteurMinEnCM); {
 			this.hauteurEnCM = this.hauteurEnCM - hauteur;
 			versLeBas = true;
 		}
