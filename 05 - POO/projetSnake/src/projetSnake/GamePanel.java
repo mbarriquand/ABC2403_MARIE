@@ -3,7 +3,6 @@ package projetSnake;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
 import java.util.Random;
 
 public class GamePanel extends JPanel implements ActionListener {
@@ -15,14 +14,16 @@ public class GamePanel extends JPanel implements ActionListener {
 	static final int DELAY = 85;
 	final int x[] = new int[GAME_UNITS];
 	final int y[] = new int[GAME_UNITS];
-	int bodyParts = 3;
-	int applesEaten;
+	int bodyParts = 6;
+	int applesEaten = 0;
 	int appleX;
 	int appleY;
 	char direction = 'R';
 	boolean running = false;
 	Timer timer;
 	Random random;
+	private int mostApplesEaten;
+	private int highestScore;
 	
 	
 	GamePanel (){
@@ -53,14 +54,17 @@ public class GamePanel extends JPanel implements ActionListener {
 				
 		if(running) {
 		for(int i = 0; i < SCREEN_HEIGHT/UNIT_SIZE; i++) {
-			/* g.drawLine(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREEN_HEIGHT);
+			
+			/* grid (optional			
+			g.drawLine(i*UNIT_SIZE, 0, i*UNIT_SIZE, SCREEN_HEIGHT);
 			g.drawLine(0, i*UNIT_SIZE, SCREEN_WIDTH, i*UNIT_SIZE); */
 		}
 		
-		
+		// apples
 		g.setColor(Color.red);
 		g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
 		
+		// snake
 		for(int i = 0; i < bodyParts; i++) {
 			if(i == 0) {
 				g.setColor(Color.green);
@@ -71,9 +75,9 @@ public class GamePanel extends JPanel implements ActionListener {
 				g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
 			}
 		}
-		
-		g.setColor(Color.red);
-		g.setFont(new Font("Arial", Font.BOLD, 40));
+				// score
+		g.setColor(Color.green);
+		g.setFont(new Font("Courier New", Font.BOLD, 20));
 		FontMetrics metrics = getFontMetrics(g.getFont());
 		g.drawString("SCORE:" + applesEaten, (SCREEN_WIDTH - metrics.stringWidth("SCORE:" + applesEaten))/2, g.getFont().getSize());
 		
@@ -147,17 +151,56 @@ public class GamePanel extends JPanel implements ActionListener {
 		
 		//Game Over text
 		
-		g.setColor(Color.red);
-		g.setFont(new Font("Arial", Font.BOLD, 75));
-		FontMetrics metrics1 = getFontMetrics(g.getFont());
-		g.drawString("Game Over", (SCREEN_WIDTH - metrics1.stringWidth("Game OVer"))/2, SCREEN_HEIGHT/2);
-		
-		g.setColor(Color.red);
-		g.setFont(new Font("Arial", Font.BOLD, 40));
-		FontMetrics metrics2 = getFontMetrics(g.getFont());
-		g.drawString("SCORE:" + applesEaten, (SCREEN_WIDTH - metrics2.stringWidth("SCORE:" + applesEaten))/2, g.getFont().getSize());
-		
-		}
+		g.setColor(Color.green);
+	    g.setFont(new Font("Courier New", Font.BOLD, 20));
+	    FontMetrics score = getFontMetrics(g.getFont());
+	    g.drawString("score: " + applesEaten,(SCREEN_WIDTH - score.stringWidth("score: " + applesEaten))/2,g.getFont().getSize());
+
+	   
+		g.setColor(Color.green);
+        g.setFont(new Font("Courier New", Font.PLAIN, 40));
+        FontMetrics gameOver = getFontMetrics(g.getFont());
+        g.drawString("Game over",(SCREEN_WIDTH - gameOver.stringWidth("Game Over"))/2,SCREEN_HEIGHT/2);
+        
+        // HIGHEST SCORE = NEEDS FIXING
+        
+      /*  int [] highestScoreArray = new int[2];  
+        int currentScore = applesEaten;
+        int bestScore = 0;
+        if (currentScore > bestScore) {
+        	bestScore = currentScore;
+                }
+        
+        highestScoreArray [0] = currentScore;
+        highestScoreArray [1] = bestScore;
+        
+        if (applesEaten > mostApplesEaten) {
+            mostApplesEaten = applesEaten;
+            highestScoreArray[1] = mostApplesEaten;
+            
+        }
+		                	
+        g.setColor(Color.green);
+        g.setFont(new Font("Courier New", Font.BOLD, 25));
+        FontMetrics highestScore = getFontMetrics(g.getFont());
+        g.drawString("Highest Score :" + highestScoreArray[1], (SCREEN_WIDTH - gameOver.stringWidth("Highest Score"))/2, SCREEN_HEIGHT/2 + 50);
+       
+       */
+       
+        g.setFont(new Font("Courier New", Font.PLAIN, 20));
+        FontMetrics reStart = getFontMetrics(g.getFont());
+        g.drawString("Press 'R' to play again",(SCREEN_WIDTH - reStart.stringWidth("Press 'R' to play again"))/2,SCREEN_HEIGHT/2 + 70);
+    }
+	
+	public void restartGame() {
+        setVisible(false);
+        new GameFrame();
+    }
+	
+	public void dispose() {
+        JFrame parent = (JFrame) this.getTopLevelAncestor();
+        parent.dispose();
+    }
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -203,6 +246,10 @@ public class GamePanel extends JPanel implements ActionListener {
 					direction = 'D';
 				}
 					break;
+			case KeyEvent.VK_R:
+                restartGame();
+                System.out.println("restart");
+                break;		
 				
 			}
 			
